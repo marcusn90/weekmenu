@@ -1,9 +1,10 @@
+//nazar
 // modules =================================================
 	var express = require('express');
 	var app     = express();
 	mongoose= require('mongoose');
 
-	// configuration ===========================================
+	// bla configuration ===========================================
 		
 	// config files
 	// var db = require('./config/db');
