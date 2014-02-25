@@ -19,15 +19,21 @@
 </head>
 <body>
 	<div class="main" ng-app="app">
-		<ul ng-controller="UsersCtrl">
-			<li ng-repeat="user in users">
-				{{user.name}}
-			</li>
-			<li>
-				<button class="btn btn-primary" ng-click="addUser()">ADD</button>
-			</li>
-			<li>{{status}}</li>
-		</ul>
+		<div ng-controller="UsersCtrl">
+			<br> 
+				<input ng-model="namefilter">
+			<br>
+			<ul>
+				<li ng-repeat="user in users | filter:namefilter">
+					{{user.first_name}} {{user.last_name}}
+				</li>
+			</ul>
+			<button class="btn btn-primary" ng-click="addUser()">ADD</button>
+			{{status}}
+			<br>
+			fname<input ng-model="first_name"><br>
+			lname <input ng-model="last_name">
+		</div>
 	</div>
 </body>
 </html>
