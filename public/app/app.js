@@ -8,4 +8,15 @@ app.controller('UsersCtrl',function($scope,$http){
 		.error(function(data){
 			console.log('Error',data);
 		});
+	$scope.addUser = function(){
+		console.log('GOOG');
+		$http.post('/api/users',{name:'Nazar'})
+		.success(function(data){
+			$scope.status = data;
+		})
+		.error(function(data){
+			$scope.status = data;
+		});
+	}
+
 });

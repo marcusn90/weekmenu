@@ -5,11 +5,13 @@
 	<title>Starter</title>
 <!-- CSS -->
 	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+	 <!--<link rel="stylesheet" href="css/style.css"> custom styles -->
 
 	<!-- JS -->
+	<!--
 	<script src="libs/jquery/jquery.min.js"></script>
-	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	  -->
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
 	
@@ -21,6 +23,10 @@
 			<li ng-repeat="user in users">
 				{{user.name}}
 			</li>
+			<li>
+				<button class="btn btn-primary" ng-click="addUser()">ADD</button>
+			</li>
+			<li>{{status}}</li>
 		</ul>
 	</div>
 </body>
